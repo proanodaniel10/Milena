@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Milena</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+
+margin:0;
+font-family:'Poppins',sans-serif;
+
+background-image:url("fondo.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+overflow-y:auto;
+
+color:white;
+text-align:center;
+
+padding:20px;
+
+}
+
+/* filtro rosado */
+
+body::before{
+
+content:"";
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(255,105,150,0.25);
+
+z-index:1;
+
+pointer-events:none;
+
+}
+
+/* TARJETA */
+
+.card{
+
+position:relative;
+z-index:3;
+
+background:rgba(255,255,255,0.15);
+
+padding:30px;
+
+border-radius:25px;
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
+
+max-width:360px;
+
+width:100%;
+
+animation:aparecer 2s ease;
+
+}
+
+img{
+
+width:150px;
+height:150px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid white;
+
+margin-bottom:15px;
+
+box-shadow:0 0 20px rgba(255,255,255,0.6);
+
+}
+
+h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:25px;
+
+margin-bottom:15px;
+
+text-shadow:0 0 10px rgba(255,255,255,0.7);
+
+}
+
+p{
+
+font-size:16px;
+
+line-height:1.6;
+
+margin-bottom:18px;
+
+}
+
+/* BOTON PRESIONAME */
+
+.boton-sorpresa{
+
+display:inline-block;
+
+margin-top:20px;
+
+font-size:20px;
+
+text-decoration:none;
+
+color:white;
+
+background:#ff4d88;
+
+padding:12px 25px;
+
+border-radius:30px;
+
+transition:0.3s;
+
+animation:latido 1.5s infinite;
+
+}
+
+.boton-sorpresa:hover{
+
+transform:scale(1.1);
+
+background:#ff2e73;
+
+}
+
+/* animación latido */
+
+@keyframes latido{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.15);}
+100%{transform:scale(1);}
+
+}
+
+/* animación tarjeta */
+
+@keyframes aparecer{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ELEMENTOS FLOTANTES */
+
+.flotante{
+
+position:fixed;
+
+top:0;
+
+font-size:22px;
+
+animation:flotar linear infinite;
+
+pointer-events:none;
+
+z-index:2;
+
+}
+
+@keyframes flotar{
+
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+
+100%{
+transform:translateY(-10vh);
+opacity:0;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<img src="foto.jpeg">
+
+<h1>🌹 Te Quiero Mucho🌹</h1>
+
+<p> Por ser mujer increíble, pero sobre todo la suerte que tengo de tenerte en mi vida. Eres una persona maravillosa, con una forma de ser que me encanta y un corazón enorme que hace que cada momento a tu lado sea especial. Admiro tu fortaleza, tu dulzura, tu manera de cuidarme y apoyarme, y esa sonrisa que puede cambiar por completo mi día. Me encanta la forma en que eres, porque no solo eres hermosa por fuera, sino también por todo lo bonito que llevas dentro. Nunca olvides lo valiosa, especial y maravillosa que eres para mí. ❤️✨ </p>
+
+<p> Quiero que sepas que no necesito una fecha especial para recordarte cuánto significas para mí. Cada día encuentro una nueva razón para quererte, admirarte y sentirme afortunado de compartir momentos contigo. Me encanta tu manera de pensar, tu personalidad, tus ocurrencias, tu ternura y hasta esos pequeños detalles que quizás tú no notas, pero que para mí hacen que seas única. Gracias por estar a mi lado, por tu cariño, por cada sonrisa, por cada abrazo y por todos esos momentos que poco a poco se han convertido en recuerdos que guardo con mucho cariño. Eres una persona que quiero seguir conociendo, disfrutando y teniendo cerca de mi vida. 💕🌷 </p>
+
+<p> Simplemente quiero recordarte algo que quizás nunca me cansaré de decirte: eres una mujer increíble y me haces muy feliz. Tu presencia hace que mis días sean diferentes, tu sonrisa tiene una forma especial de alegrarme y estar contigo hace que los momentos más sencillos se vuelvan especiales. Gracias por ser tú, por dejarme compartir parte de tu vida y por permitirme construir contigo tantos momentos bonitos. Espero poder seguir estando a tu lado, apoyándote en tus sueños, celebrando tus logros, acompañándote en los días difíciles y disfrutando juntos de todo lo que venga. Te quiero muchísimo y espero que nunca olvides lo especial que eres para mí. ❤️🌹 </p>
+
+<p>
+💖 Gracias por existir 💖
+</p>
+
+<p>
+💖🌸✨ Con todo Cariño, Daniel 💖🌸✨
+</p>
+
+<!-- BOTON -->
+
+<a href="https://proanodaniel10.github.io/flowers/" target="_blank" class="boton-sorpresa">
+💖 PRESIÓNAME 💖
+</a>
+
+</div>
+
+<script>
+
+const elementos=["❤","💖","🌸","✨","🌹"]
+
+function crearElemento(){
+
+const el=document.createElement("div")
+
+el.className="flotante"
+
+el.innerHTML=elementos[Math.floor(Math.random()*elementos.length)]
+
+el.style.left=Math.random()*100+"vw"
+
+el.style.fontSize=(Math.random()*20+16)+"px"
+
+el.style.animationDuration=(Math.random()*5+4)+"s"
+
+document.body.appendChild(el)
+
+setTimeout(()=>{
+
+el.remove()
+
+},9000)
+
+}
+
+setInterval(crearElemento,250)
+
+</script>
+
+</body>
+</html>
